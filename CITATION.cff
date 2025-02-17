@@ -19,6 +19,6 @@ authors:
     given-names: "Andrea"
 title: "Myoelectric driven gait phase recognition development platform"
 version: 1.0.0
-doi: "10.xxxx/your-doi"  # Replace with your DOI (e.g., from Zenodo)
-repository-code: "https://github.com/your-username/your-repo-name"  # Replace with your repo URL
+doi: "https://doi.org/10.5281/zenodo.14883329"
+repository-code: "https://github.com/your-username/your-repo-name"
 license: MIT
