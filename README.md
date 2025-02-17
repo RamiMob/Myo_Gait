@@ -30,5 +30,5 @@ pip install numpy pandas scikit-learn matplotlib
 
 
 Please cite as as
-- 
+- Mobarak, Rami, et al. Myo_Gait: Myoelectric Driven Gait Phase Recognition Development Platform. Version 1.0.0, Zenodo, 2024, https://doi.org/10.5281/zenodo.14883329.
 - Tigrini, Andrea, et al. "Phasor-based myoelectric synergy features: a fast hand-crafted feature extraction scheme for boosting performance in gait phase recognition." Sensors 24.17 (2024): 5828.
