@@ -1,6 +1,21 @@
+# Importing necessary libraries
+import math  # Provides mathematical functions (e.g., sqrt, log, etc.)
+import numpy as np  # Library for numerical computations and array manipulations
+import pandas as pd  # Library for data manipulation and analysis (e.g., DataFrames)
+import matplotlib.pyplot as plt  # Library for creating visualizations and plots
+from matplotlib import patches
+from sklearn.model_selection import train_test_split  # Splits data into training and testing sets
+from sklearn.model_selection import KFold  # Implements k-fold cross-validation
+from sklearn.preprocessing import StandardScaler  # Standardizes features by removing mean and scaling to unit variance
+from libemg.filtering import Filter  # For filtering EMG signals (e.g., bandpass, notch filters)
+from libemg.emg_predictor import EMGClassifier  # For building and training EMG classification models
+from libemg.feature_extractor import FeatureExtractor  # Extracts features from EMG signals
+from libemg.offline_metrics import OfflineMetrics  # Computes offline performance metrics for EMG models
+from libemg.utils import get_windows  # Utility function to segment EMG data into windows
+
 # Initialize an empty list to store accuracies
 accuracies = []
-
+fe = FeatureExtractor()
 # Set the motion type and other parameters
 mottype = 'WAK'
 sf = 1920  # Sampling frequency
@@ -28,7 +43,7 @@ for classifier in models:
         accuracies = []  # Reset accuracies list for each feature set
 
         # Loop through 40 subjects (1-40)
-        for i in range(1, 6):
+        for i in range(1, 41):
             # Determine file paths for data and labels based on subject number
             if i < 10:
                 data_path = f'/content/drive/MyDrive/Colab Notebooks/Bohnes25/Sub0{i}_{mottype}_Data.csv'
@@ -64,8 +79,8 @@ for classifier in models:
                 feattest = fe.extract_feature_group(feat, windowstest) #Extract features
                 feattrain_overall = np.hstack([value for value in feattrain.values()])
                 feattest_overall = np.hstack([value for value in feattest.values()])
-                classtrain = classtrain[::slidingInc][:feattrain_overall.shape[0]]
-                classtest = classtest[::slidingInc][:feattest_overall.shape[0]] #Synchronizing labels
+                classtrain = classtrain[::si][:feattrain_overall.shape[0]]
+                classtest = classtest[::si][:feattest_overall.shape[0]] #Synchronizing labels
                 sc = StandardScaler()
                 feattrain_overall = sc.fit_transform(feattrain_overall)
                 feattest_overall = sc.transform(feattest_overall) #Standardization
