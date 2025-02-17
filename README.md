@@ -30,5 +30,5 @@ pip install numpy pandas scikit-learn matplotlib
 
 
 Please cite as as
--
--
+- 
+- Tigrini, Andrea, et al. "Phasor-based myoelectric synergy features: a fast hand-crafted feature extraction scheme for boosting performance in gait phase recognition." Sensors 24.17 (2024): 5828.
