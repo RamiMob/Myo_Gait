@@ -1,10 +1,20 @@
 cff-version: 1.2.0
 message: "If you use this software, please cite it as follows:"
 authors:
-  - family-names: "YourLastName"
-    given-names: "YourFirstName"
-title: "Automatic Gait Phase Recognition Using Lower Limb EMG with LibEMG"
+  - family-names: "Mobarak"
+    given-names: "Rami"
+  - family-names: "Mengarelli"
+    given-names: "Alessandro"
+  - family-names: "Verdini"
+    given-names: "Federica"
+  - family-names: "Fioretti"
+    given-names: "Sandro"
+  - family-names: "Burattini"
+    given-names: "Laura"
+  - family-names: "Tigrini"
+    given-names: "Andrea"
+title: "Myoelectric driven gait phase recognition development platform"
 version: 1.0.0
-doi: "10.xxxx/your-doi"  # Add a DOI if you have one (e.g., from Zenodo)
-repository-code: "https://github.com/your-username/your-repo-name"
+doi: "10.xxxx/your-doi"  # Replace with your DOI (e.g., from Zenodo)
+repository-code: "https://github.com/your-username/your-repo-name"  # Replace with your repo URL
 license: MIT
