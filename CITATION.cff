@@ -17,7 +17,7 @@ authors:
     given-names: "Laura"
   - family-names: "Tigrini"
     given-names: "Andrea"
-title: "Myoelectric driven gait phase recognition development platform"
+title: "Myo_Gait : myoelectric driven gait phase recognition development platform"
 version: 1.0.0
 doi: "https://doi.org/10.5281/zenodo.14883329"
 repository-code: "https://github.com/your-username/your-repo-name"
